@@ -1,0 +1,27 @@
+/* ==========================================================================
+    Main styles
+   ========================================================================== */
+// CONFIGURATION
+@charset "UTF-8";
+@import "config/vars";
+@import "config/mixins";
+@import "config/responsive";
+@import "config/helpers";
+@import "config/grid";
+
+// LIBRARIES / PLUGINS
+
+
+// PROJECT
+@import "ui/typography";
+@import "ui/anims";
+@import "ui/buttons";
+@import "ui/layout";
+
+
+
+// COMPONENTS
+
+@import "components/screen-start";
+@import "components/screen-game";
+@import "components/screen-final";

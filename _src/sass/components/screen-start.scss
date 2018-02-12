@@ -1,0 +1,160 @@
+.screen-start {
+    margin: 0 auto;
+    max-width: 135rem;
+    width: 98%;
+    .legend {
+        display: flex;
+        justify-content: space-around;
+    }
+    figure {
+        background: #333;
+        border-radius: 0.5rem;
+        color: #FFF;
+        overflow: hidden;
+        width: 30rem;
+        text-align: center;
+        height: 40rem;
+        position: relative;
+        margin: 10px 1%;
+        &:hover {
+            img {
+                opacity: 0.4;
+            }
+            figcaption::before,
+            figcaption::after {
+                opacity: 1;
+                transform: scale(1);
+
+            }
+            h2,
+            p {
+                opacity: 1;
+                transform: translate3d(0,0,0);
+            }
+        }
+    }
+    img {
+        display: block;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.7;
+        position: relative;
+        transition: opacity 0.35s;
+        width: 100%;
+    }
+    figcaption {
+        box-sizing: border-box;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        padding: 2em;
+        text-transform: uppercase;
+        font-size: 1.25em;
+        backface-visibility: hidden;
+        &:before,
+        &:after {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            bottom: 30px;
+            left: 30px;
+            content: '';
+            opacity: 0;
+            transition: opacity 0.35s, transform 0.35s;
+        }
+        &:before {
+            border-top: 1px solid #fff;
+            border-bottom: 1px solid #fff;
+            transform: scale(0,1);
+        }
+        &:after {
+            border-right: 1px solid #fff;
+            border-left: 1px solid #fff;
+            transform: scale(1,0);
+        }
+    }
+    h2 {
+        margin: 0;
+        padding-top: 85%;
+        word-spacing: -0.15em;
+        font-weight: 300;
+        text-transform: uppercase;
+        transition: transform 0.35s;
+        transform: translate3d(0,-20px,0);
+        span {
+            font-weight: 800;
+        }
+    }
+    p {
+        font-size: 1.6rem;
+        padding: 2rem;
+        opacity: 0;
+        transition: opacity 0.35s, transform 0.35s;
+        transform: translate3d(0,20px,0);
+    }
+    .btn-play {
+        background: 0 none;
+        border: 3px solid #FFF;
+        box-sizing: border-box;
+        cursor: pointer;
+        color: #FFF;
+        display: flex;
+        justify-content: center;
+        font-size: 1.6rem;
+        letter-spacing: 0.2rem;
+        font-weight: 700;
+        padding: 1rem 6rem;
+        position: relative;
+        margin: 5rem auto;-webkit-backface-visibility: hidden;
+        -moz-osx-font-smoothing: grayscale;
+        max-width: 15rem;
+        text-align: center;
+        text-transform: uppercase;
+        overflow: hidden;
+        transition: color 0.3s;
+        z-index: 1;
+        &:before,
+        &:after {
+            bottom: 100%;
+            content: '';
+            height: 100%;
+            left: 0;
+            position: absolute;
+            transition: transform 0.3s;
+            transition-timing-function: ease;
+            transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+            width: 100%;
+            z-index: -1;
+        }
+        &:before {
+            background: #7986cb;
+        }
+        &:after {
+            background: #3f51b5;
+        }
+        &:hover {
+            color: #fff;
+            &:before,
+            &:after {
+                transform: translate3d(0, 100%, 0);
+            }
+            &:after {
+                transition-delay: 0.175s;
+            }
+        }
+        i {
+            border-style: solid;
+            border-width: 10px 0 10px 15px;
+            border-color: transparent transparent transparent #FFF;
+            display: block;
+            height: 0;
+            margin-right: 1rem;
+            position: relative;
+            vertical-align: text-bottom;
+            width: 0;
+            z-index: 1;
+        }
+    }
+}

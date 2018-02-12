@@ -1,0 +1,39 @@
+/* ==============================
+    Tables
+   ============================== */
+thead,
+tfoot,
+tfoot tr {
+    border: 0 none;
+}
+table.teq-table {
+    width: 100%;
+}
+th, td{
+  font: teq-em(11) sans-serif;
+  padding: 10px;
+  text-align: center;
+}
+.teq-table th,
+.teq-table td {
+    border: 1px solid #ececec;
+
+}
+th{
+  font-weight: bold;
+}
+.teq-table th {
+    background: #f7f7f7;
+
+}
+.teq-table tbody > tr:nth-child(even) > td {
+    background: #f7f7f7;
+}
+.teq-table tfoot td {
+    border: 0 none;
+    color: #777;
+    font: italic teq-em(11) sans-serif;
+    padding: 10px 0;
+}
+
+

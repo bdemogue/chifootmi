@@ -1,0 +1,48 @@
+/* ==========================================================================
+    Helpers & Objects
+   ========================================================================== */
+
+/* ==============================
+    Helper classes
+   ============================== */
+
+//
+// Automatic hyphens for justified text
+//
+%auto-hyphens {
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -o-hyphens: auto;
+    hyphens: auto;
+}
+
+//
+// Avoid long text breaking out of containers
+//
+%prevent-text-breakouts {
+    -ms-word-break: break-all;
+    word-break: break-all;
+    word-break: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+}
+
+
+/*
+ * Clearfix
+ */
+.clearfix {
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+
+

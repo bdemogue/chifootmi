@@ -1,0 +1,6 @@
+## Folders
+.idea/*
+node_modules/*
+assets/scripts/vendor/bower/*
+resources/integration/hot
+/app/public/dist/frontend/hot

@@ -1,0 +1,518 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,500,700);/* ==========================================================================
+    Main styles
+   ========================================================================== */
+/* ==========================================================================
+    Helpers & Objects
+   ========================================================================== */
+/* ==============================
+    Helper classes
+   ============================== */
+/*
+ * Clearfix
+ */
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+/* ==========================================================================
+    Custom fonts
+   ========================================================================== */
+/* ==========================================================================
+    Default element styles
+   ========================================================================== */
+html,
+button,
+input,
+select,
+textarea {
+  color: #FFF;
+}
+
+html {
+  font: 62.5% "Raleway", Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
+  line-height: 1.4;
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  -moz-font-smoothing: none;
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ==============================
+    Typography
+   ============================== */
+/* "-like" classes should be used to maintain the semantically appropriate heading levels - NOT for use on non-headings */
+h1,
+.h1-like {
+  font-size: 5rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+p, li {
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.8;
+}
+
+li li,
+li p {
+  font-size: 1em;
+}
+
+p {
+  margin: 0 0 20px;
+}
+
+ul {
+  padding-left: 30px;
+  margin: 0;
+}
+
+ul ol, ul ul {
+  margin: 0;
+}
+
+ul ol li, ul ul li {
+  margin: 0 0 10px;
+}
+
+ol {
+  padding-left: 20px;
+}
+
+ol ol, ol ul {
+  margin: 0;
+}
+
+ol ol li, ol ul li {
+  margin: 0 0 10px;
+}
+
+ol li {
+  margin: 0 0 20px;
+}
+
+ul li {
+  margin: 0 0 20px;
+  list-style: none;
+  padding-left: 10px;
+  position: relative;
+}
+
+.nobullets li:before {
+  display: none;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover,
+a:focus,
+a:active {
+  color: #000;
+}
+
+/* ==============================
+    Other
+   ============================== */
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+address {
+  line-height: 1.5;
+  margin-bottom: 1em;
+}
+
+hr {
+  background: rgba(255, 255, 255, 0.1);
+  border: 0 none;
+  margin: 20px 0;
+  height: 1px;
+}
+
+::-moz-selection {
+  background: #000;
+  color: #FFF;
+  text-shadow: none;
+}
+
+::selection {
+  background: #000;
+  color: #FFF;
+  text-shadow: none;
+}
+
+.fade-enter-active {
+  -webkit-transition: opacity .5s;
+  transition: opacity .5s;
+}
+
+.fade-enter {
+  opacity: 0;
+}
+
+/* ==============================
+    Global
+   ============================== */
+html,
+body {
+  background-color: #212121;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+body {
+  position: relative;
+  scroll-behavior: smooth;
+}
+
+.screen-start {
+  margin: 0 auto;
+  max-width: 135rem;
+  width: 98%;
+}
+
+.screen-start .legend {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.screen-start figure {
+  background: #333;
+  border-radius: 0.5rem;
+  color: #FFF;
+  overflow: hidden;
+  width: 30rem;
+  text-align: center;
+  height: 40rem;
+  position: relative;
+  margin: 10px 1%;
+}
+
+.screen-start figure:hover img {
+  opacity: 0.4;
+}
+
+.screen-start figure:hover figcaption::before,
+.screen-start figure:hover figcaption::after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.screen-start figure:hover h2,
+.screen-start figure:hover p {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
+.screen-start img {
+  display: block;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0.7;
+  position: relative;
+  -webkit-transition: opacity 0.35s;
+  transition: opacity 0.35s;
+  width: 100%;
+}
+
+.screen-start figcaption {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 2em;
+  text-transform: uppercase;
+  font-size: 1.25em;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.screen-start figcaption:before, .screen-start figcaption:after {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  bottom: 30px;
+  left: 30px;
+  content: '';
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
+}
+
+.screen-start figcaption:before {
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: scale(0, 1);
+          transform: scale(0, 1);
+}
+
+.screen-start figcaption:after {
+  border-right: 1px solid #fff;
+  border-left: 1px solid #fff;
+  -webkit-transform: scale(1, 0);
+          transform: scale(1, 0);
+}
+
+.screen-start h2 {
+  margin: 0;
+  padding-top: 85%;
+  word-spacing: -0.15em;
+  font-weight: 300;
+  text-transform: uppercase;
+  -webkit-transition: -webkit-transform 0.35s;
+  transition: -webkit-transform 0.35s;
+  transition: transform 0.35s;
+  transition: transform 0.35s, -webkit-transform 0.35s;
+  -webkit-transform: translate3d(0, -20px, 0);
+          transform: translate3d(0, -20px, 0);
+}
+
+.screen-start h2 span {
+  font-weight: 800;
+}
+
+.screen-start p {
+  font-size: 1.6rem;
+  padding: 2rem;
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
+  -webkit-transform: translate3d(0, 20px, 0);
+          transform: translate3d(0, 20px, 0);
+}
+
+.screen-start .btn-play {
+  background: 0 none;
+  border: 3px solid #FFF;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  cursor: pointer;
+  color: #FFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.6rem;
+  letter-spacing: 0.2rem;
+  font-weight: 700;
+  padding: 1rem 6rem;
+  position: relative;
+  margin: 5rem auto;
+  -webkit-backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  max-width: 15rem;
+  text-align: center;
+  text-transform: uppercase;
+  overflow: hidden;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+  z-index: 1;
+}
+
+.screen-start .btn-play:before, .screen-start .btn-play:after {
+  bottom: 100%;
+  content: '';
+  height: 100%;
+  left: 0;
+  position: absolute;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+  -webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+          transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+  width: 100%;
+  z-index: -1;
+}
+
+.screen-start .btn-play:before {
+  background: #7986cb;
+}
+
+.screen-start .btn-play:after {
+  background: #3f51b5;
+}
+
+.screen-start .btn-play:hover {
+  color: #fff;
+}
+
+.screen-start .btn-play:hover:before, .screen-start .btn-play:hover:after {
+  -webkit-transform: translate3d(0, 100%, 0);
+          transform: translate3d(0, 100%, 0);
+}
+
+.screen-start .btn-play:hover:after {
+  -webkit-transition-delay: 0.175s;
+          transition-delay: 0.175s;
+}
+
+.screen-start .btn-play i {
+  border-style: solid;
+  border-width: 10px 0 10px 15px;
+  border-color: transparent transparent transparent #FFF;
+  display: block;
+  height: 0;
+  margin-right: 1rem;
+  position: relative;
+  vertical-align: text-bottom;
+  width: 0;
+  z-index: 1;
+}
+
+.screen-game {
+  margin: 0 auto;
+  max-width: 135rem;
+  width: 98%;
+}
+
+.screen-game .-list-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.screen-game .-score {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 4rem;
+}
+
+.screen-game figure {
+  background: #333;
+  border-radius: 0.5rem;
+  color: #FFF;
+  cursor: pointer;
+  height: 20rem;
+  margin: 10px 1%;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  width: 25rem;
+}
+
+.screen-game figure:hover img {
+  opacity: 0.4;
+}
+
+.screen-game figure img {
+  height: 100%;
+  opacity: 0.7;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center top;
+     object-position: center top;
+  width: 100%;
+}
+
+.screen-game figcaption {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 2em;
+  text-transform: uppercase;
+  font-size: 1.25em;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.screen-game figcaption:before, .screen-game figcaption:after {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  bottom: 30px;
+  left: 30px;
+  content: '';
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
+}
+
+.screen-game figcaption:before {
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: scale(0, 1);
+          transform: scale(0, 1);
+}
+
+.screen-game figcaption:after {
+  border-right: 1px solid #fff;
+  border-left: 1px solid #fff;
+  -webkit-transform: scale(1, 0);
+          transform: scale(1, 0);
+}
+
+.screen-game h2 {
+  margin: 0;
+  padding-top: 75%;
+  word-spacing: -0.15em;
+  font-weight: 300;
+  text-transform: uppercase;
+  -webkit-transition: -webkit-transform 0.35s;
+  transition: -webkit-transform 0.35s;
+  transition: transform 0.35s;
+  transition: transform 0.35s, -webkit-transform 0.35s;
+  -webkit-transform: translate3d(0, -20px, 0);
+          transform: translate3d(0, -20px, 0);
+}
+
+.screen-game h2 span {
+  font-weight: 800;
+}
+
+.screen-game p {
+  display: none;
+}
+
+.screen-final {
+  margin: 0 auto;
+  max-width: 135rem;
+  width: 98%;
+}
+
+/*# sourceMappingURL=styles.css.map*/
