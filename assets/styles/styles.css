@@ -55,6 +55,7 @@ h1,
 .h1-like {
   font-size: 8rem;
   font-weight: 400;
+  margin: 8rem 0 6rem;
   text-align: center;
 }
 
@@ -420,14 +421,8 @@ body {
   width: 98%;
 }
 
-.screen-game .-list-card {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .screen-game .-label-choice {
-  font-size: 6rem;
+  font-size: 4.5rem;
 }
 
 .screen-game .-label-choice:after {
@@ -436,14 +431,40 @@ body {
           animation: loading 1s ease alternate infinite;
 }
 
-.screen-game .-score {
+.screen-game .-list-card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.screen-game .-list-card.-played {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  font-size: 4rem;
+}
+
+.screen-game .-list-card.-played figure {
+  height: 15rem;
+  width: 30rem;
+}
+
+.screen-game .-list-card.-played img {
+  opacity: 0.4;
+}
+
+.screen-game .-list-card.-played h2 {
+  padding-top: 25%;
+}
+
+.screen-game .-score {
+  color: #3f51b5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 5rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .screen-game figure {
@@ -456,6 +477,8 @@ body {
   overflow: hidden;
   position: relative;
   text-align: center;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   width: 25rem;
 }
 

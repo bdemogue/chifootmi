@@ -417,6 +417,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 
 
@@ -491,6 +492,15 @@ var randomArrayElement = function randomArrayElement(myArray) {
         roundClass: function roundClass(round) {
             if (this.currentRound > round) {
                 return '-played';
+            }
+        },
+        isSelected: function isSelected(player, round) {
+            if (!this.playerChoices[round - 1]) {
+                return;
+            }
+
+            if (player.id === this.playerChoices[round - 1].id) {
+                return '-selected';
             }
         }
     }
@@ -1275,6 +1285,7 @@ var render = function() {
                   _vm._l(_vm.players, function(player) {
                     return _c("player-card", {
                       key: player.id,
+                      class: _vm.isSelected(player, round),
                       attrs: {
                         select: true,
                         player: player,
