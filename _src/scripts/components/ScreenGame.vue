@@ -16,6 +16,7 @@
                 <player-card
                         v-for="player in players"
                         @click.native="selectPlayer(player, round)"
+                        :class="isSelected(player, round)"
                         :key="player.id"
                         :select="true"
                         :player="player" format="horizontal"
@@ -107,6 +108,16 @@
             roundClass(round) {
                 if (this.currentRound > round) {
                     return '-played'
+                }
+            },
+
+            isSelected(player, round) {
+                if (!this.playerChoices[round - 1]) {
+                    return;
+                }
+
+                if (player.id === this.playerChoices[round - 1].id) {
+                    return '-selected';
                 }
             }
         }
