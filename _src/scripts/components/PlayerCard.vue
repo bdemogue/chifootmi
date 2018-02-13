@@ -1,6 +1,6 @@
 <template>
     <figure :class="cardClass">
-        <img :src="player.image" alt="Zinedine Zidane">
+        <img :src="player.image" :alt="`${player.firstName} ${player.lastName}`">
         <figcaption>
             <h2>{{ player.firstName}} <span>{{ player.lastName}}</span></h2>
             <p>{{ player.label}}</p>

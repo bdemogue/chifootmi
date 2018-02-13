@@ -1,8 +1,8 @@
 <template>
     <div class="screen-final">
-        <div> {{ resultText }}</div>
-        <button @click="playAgain" class="btn-replay">Play Again</button>
-        <button @click="goHome" class="btn-replay">Back Home</button>
+        <div class="-result"> {{ resultText }}</div>
+        <button @click="playAgain" class="btn btn-replay">Play Again</button>
+        <button @click="goHome" class="btn btn-replay">Back Home</button>
     </div>
 </template>
 <script>

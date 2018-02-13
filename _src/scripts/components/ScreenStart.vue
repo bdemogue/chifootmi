@@ -9,7 +9,7 @@
                            :player="player"
                    />
                 </div>
-                <button @click="play" class="btn-play"><i>&nbsp;</i>Play</button>
+                <button @click="play" class="btn btn-play"><i>&nbsp;</i>Play</button>
             </div>
         </transition>
         <transition name="fade">
@@ -45,23 +45,26 @@
 
                 players: [
                     {
+                        id: 1,
                         firstName: 'Zinédine',
                         lastName: 'Zidane',
-                        image: "http://www.fanafoot.com/wp-content/uploads/2014/04/zinedine-zidane.jpg",
+                        image: "assets/styles/images/zinedine-zidane.jpg",
                         label: "This is rock",
                         type: 'rock'
                     },
                     {
+                        id: 2,
                         firstName: 'Marco',
                         lastName: 'Materazzi',
-                        image: "https://static.foba1.com/bilder/spieler/gross/1343.jpg",
+                        image: "assets/styles/images/marco-materazzi.jpg",
                         label: "This is scissors",
                         type: 'scissors'
                     },
                     {
+                        id: 3,
                         firstName: 'Horacio',
                         lastName: 'Elizondo',
-                        image: "http://img.spokeo.com/public/900-600/horacio_elizondo_2006_07_01.jpg",
+                        image: "assets/styles/images/horacio-elizondo.jpg",
                         label: "This is paper",
                         type: 'paper',
                     },

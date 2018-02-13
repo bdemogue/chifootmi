@@ -53,7 +53,7 @@ html {
 /* "-like" classes should be used to maintain the semantically appropriate heading levels - NOT for use on non-headings */
 h1,
 .h1-like {
-  font-size: 5rem;
+  font-size: 8rem;
   font-weight: 400;
   text-align: center;
 }
@@ -164,6 +164,108 @@ hr {
 
 .fade-enter {
   opacity: 0;
+}
+
+@-webkit-keyframes loading {
+  60% {
+    text-shadow: 0.35em 0 0 currentColor;
+  }
+  100% {
+    text-shadow: 0.35em 0 0 currentColor, 0.75em 0 0 currentColor;
+  }
+}
+
+@keyframes loading {
+  60% {
+    text-shadow: 0.35em 0 0 currentColor;
+  }
+  100% {
+    text-shadow: 0.35em 0 0 currentColor, 0.75em 0 0 currentColor;
+  }
+}
+
+.btn {
+  background: 0 none;
+  border: 3px solid #FFF;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  cursor: pointer;
+  color: #FFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.6rem;
+  letter-spacing: 0.2rem;
+  font-weight: 700;
+  padding: 1rem 6rem;
+  position: relative;
+  margin: 5rem auto;
+  -webkit-backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  min-width: 15rem;
+  text-align: center;
+  text-transform: uppercase;
+  overflow: hidden;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.btn:before, .btn:after {
+  bottom: 100%;
+  content: '';
+  height: 100%;
+  left: 0;
+  position: absolute;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+  -webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+          transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+  width: 100%;
+  z-index: -1;
+}
+
+.btn:before {
+  background: #7986cb;
+}
+
+.btn:after {
+  background: #3f51b5;
+}
+
+.btn:hover {
+  color: #fff;
+}
+
+.btn:hover:before, .btn:hover:after {
+  -webkit-transform: translate3d(0, 100%, 0);
+          transform: translate3d(0, 100%, 0);
+}
+
+.btn:hover:after {
+  -webkit-transition-delay: 0.175s;
+          transition-delay: 0.175s;
+}
+
+.btn-play i {
+  border-style: solid;
+  border-width: 10px 0 10px 15px;
+  border-color: transparent transparent transparent #FFF;
+  display: block;
+  height: 0;
+  margin-right: 1rem;
+  position: relative;
+  vertical-align: text-bottom;
+  width: 0;
+  z-index: 1;
 }
 
 /* ==============================
@@ -312,89 +414,6 @@ body {
           transform: translate3d(0, 20px, 0);
 }
 
-.screen-start .btn-play {
-  background: 0 none;
-  border: 3px solid #FFF;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  cursor: pointer;
-  color: #FFF;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  font-size: 1.6rem;
-  letter-spacing: 0.2rem;
-  font-weight: 700;
-  padding: 1rem 6rem;
-  position: relative;
-  margin: 5rem auto;
-  -webkit-backface-visibility: hidden;
-  -moz-osx-font-smoothing: grayscale;
-  max-width: 15rem;
-  text-align: center;
-  text-transform: uppercase;
-  overflow: hidden;
-  -webkit-transition: color 0.3s;
-  transition: color 0.3s;
-  z-index: 1;
-}
-
-.screen-start .btn-play:before, .screen-start .btn-play:after {
-  bottom: 100%;
-  content: '';
-  height: 100%;
-  left: 0;
-  position: absolute;
-  -webkit-transition: -webkit-transform 0.3s;
-  transition: -webkit-transform 0.3s;
-  transition: transform 0.3s;
-  transition: transform 0.3s, -webkit-transform 0.3s;
-  -webkit-transition-timing-function: ease;
-          transition-timing-function: ease;
-  -webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
-          transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
-  width: 100%;
-  z-index: -1;
-}
-
-.screen-start .btn-play:before {
-  background: #7986cb;
-}
-
-.screen-start .btn-play:after {
-  background: #3f51b5;
-}
-
-.screen-start .btn-play:hover {
-  color: #fff;
-}
-
-.screen-start .btn-play:hover:before, .screen-start .btn-play:hover:after {
-  -webkit-transform: translate3d(0, 100%, 0);
-          transform: translate3d(0, 100%, 0);
-}
-
-.screen-start .btn-play:hover:after {
-  -webkit-transition-delay: 0.175s;
-          transition-delay: 0.175s;
-}
-
-.screen-start .btn-play i {
-  border-style: solid;
-  border-width: 10px 0 10px 15px;
-  border-color: transparent transparent transparent #FFF;
-  display: block;
-  height: 0;
-  margin-right: 1rem;
-  position: relative;
-  vertical-align: text-bottom;
-  width: 0;
-  z-index: 1;
-}
-
 .screen-game {
   margin: 0 auto;
   max-width: 135rem;
@@ -405,6 +424,16 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.screen-game .-label-choice {
+  font-size: 6rem;
+}
+
+.screen-game .-label-choice:after {
+  content: '.';
+  -webkit-animation: loading 1s ease alternate infinite;
+          animation: loading 1s ease alternate infinite;
 }
 
 .screen-game .-score {
@@ -512,7 +541,15 @@ body {
 .screen-final {
   margin: 0 auto;
   max-width: 135rem;
+  text-align: center;
   width: 98%;
+}
+
+.screen-final .-result {
+  color: #7986cb;
+  font-size: 8rem;
+  font-weight: 300;
+  margin: 10% 0;
 }
 
 /*# sourceMappingURL=styles.css.map*/

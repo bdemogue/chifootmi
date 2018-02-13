@@ -1,5 +1,12 @@
 .screen-final {
     margin: 0 auto;
     max-width: 135rem;
+    text-align: center;
     width: 98%;
+    .-result {
+        color: #7986cb;
+        font-size: 8rem;
+        font-weight: 300;
+        margin: 10% 0;
+    }
 }

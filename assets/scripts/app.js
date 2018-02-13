@@ -403,6 +403,20 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -423,42 +437,61 @@ var randomArrayElement = function randomArrayElement(myArray) {
             currentRound: 1,
             playerScore: 0,
             computerScore: 0,
-            playerChoice: {},
-            computerChoice: {}
+            playerChoices: [],
+            computerChoices: []
         };
     },
 
 
     methods: {
-        selectPlayer: function selectPlayer(player) {
-            this.playerChoice = player;
-            this.computerChoice = randomArrayElement(this.players);
+        selectPlayer: function selectPlayer(player, round) {
+            if (!this.canInteract(round)) {
+                return false;
+            }
 
-            this.computeRound();
+            this.playerChoices.push(player);
+            this.computerChoices.push(randomArrayElement(this.players));
+
+            this.computeRound(round - 1);
         },
-        computeRound: function computeRound() {
-            switch (this.computerChoice.type) {
-                case this.playerChoice.type:
+        computeRound: function computeRound(round) {
+            var _this = this;
+
+            switch (this.computerChoices[round].type) {
+                case this.playerChoices[round].type:
                     this.playerScore += 1;
                     this.computerScore += 1;
                     break;
 
                 case "rock":
-                    this.playerChoice.type === "paper" ? this.playerScore += 1 : this.computerScore += 1;
+                    this.playerChoices[round].type === "paper" ? this.playerScore += 1 : this.computerScore += 1;
                     break;
                 case "scissors":
-                    this.playerChoice.type === "paper" ? this.computerScore += 1 : this.playerScore += 1;
+                    this.playerChoices[round].type === "paper" ? this.computerScore += 1 : this.playerScore += 1;
                     break;
                 case "paper":
-                    this.playerChoice.type === "rock" ? this.computerScore += 1 : this.playerScore += 1;
+                    this.playerChoices[round].type === "rock" ? this.computerScore += 1 : this.playerScore += 1;
                     break;
             }
 
             if (this.currentRound + 1 > this.rounds) {
-                return this.$emit('game-end', this.playerScore - this.computerScore);
+                setTimeout(function () {
+                    return _this.$emit('game-end', _this.playerScore - _this.computerScore);
+                }, 2000);
             }
 
             this.currentRound += 1;
+        },
+        canShowRound: function canShowRound(round) {
+            return this.currentRound >= round;
+        },
+        canInteract: function canInteract(round) {
+            return this.currentRound === round;
+        },
+        roundClass: function roundClass(round) {
+            if (this.currentRound > round) {
+                return '-played';
+            }
         }
     }
 
@@ -523,21 +556,24 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             scoreDifference: null,
 
             players: [{
+                id: 1,
                 firstName: 'Zinédine',
                 lastName: 'Zidane',
-                image: "http://www.fanafoot.com/wp-content/uploads/2014/04/zinedine-zidane.jpg",
+                image: "assets/styles/images/zinedine-zidane.jpg",
                 label: "This is rock",
                 type: 'rock'
             }, {
+                id: 2,
                 firstName: 'Marco',
                 lastName: 'Materazzi',
-                image: "https://static.foba1.com/bilder/spieler/gross/1343.jpg",
+                image: "assets/styles/images/marco-materazzi.jpg",
                 label: "This is scissors",
                 type: 'scissors'
             }, {
+                id: 3,
                 firstName: 'Horacio',
                 lastName: 'Elizondo',
-                image: "http://img.spokeo.com/public/900-600/horacio_elizondo_2006_07_01.jpg",
+                image: "assets/styles/images/horacio-elizondo.jpg",
                 label: "This is paper",
                 type: 'paper'
             }]
@@ -1153,10 +1189,11 @@ var render = function() {
               })
             ),
             _vm._v(" "),
-            _c("button", { staticClass: "btn-play", on: { click: _vm.play } }, [
-              _c("i", [_vm._v(" ")]),
-              _vm._v("Play")
-            ])
+            _c(
+              "button",
+              { staticClass: "btn btn-play", on: { click: _vm.play } },
+              [_c("i", [_vm._v(" ")]), _vm._v("Play")]
+            )
           ]
         )
       ]),
@@ -1214,45 +1251,65 @@ var render = function() {
   return _c("div", { staticClass: "screen-game" }, [
     _c("p", [_vm._v("Match in 3 sets")]),
     _vm._v(" "),
-    _c("div", [
-      _c("div", {}, [_vm._v("Choice")]),
-      _vm._v(" "),
-      _vm._m(0),
-      _vm._v(" "),
-      _c(
-        "div",
-        { staticClass: "-list-card" },
-        [
-          _vm._l(_vm.players, function(player, index) {
-            return _c("player-card", {
-              key: index,
-              attrs: { select: true, player: player, format: "horizontal" },
-              nativeOn: {
-                click: function($event) {
-                  _vm.selectPlayer(player)
-                }
-              }
-            })
-          }),
+    _c(
+      "div",
+      [
+        _c("div", { staticClass: "-score" }, [
+          _c("div", { staticClass: "-gamer" }, [
+            _c("span", [_vm._v("You")]),
+            _vm._v(" " + _vm._s(_vm.playerScore) + " ")
+          ]),
           _vm._v(" "),
-          _c("div")
-        ],
-        2
-      )
-    ])
+          _c("div", { staticClass: "-gamer" }, [
+            _vm._v(_vm._s(_vm.computerScore) + " "),
+            _c("span", [_vm._v("Computer")])
+          ])
+        ]),
+        _vm._v(" "),
+        _vm._l(_vm.rounds, function(round) {
+          return _vm.canShowRound(round)
+            ? _c(
+                "div",
+                { key: round, class: ["-list-card", _vm.roundClass(round)] },
+                [
+                  _vm._l(_vm.players, function(player) {
+                    return _c("player-card", {
+                      key: player.id,
+                      attrs: {
+                        select: true,
+                        player: player,
+                        format: "horizontal"
+                      },
+                      nativeOn: {
+                        click: function($event) {
+                          _vm.selectPlayer(player, round)
+                        }
+                      }
+                    })
+                  }),
+                  _vm._v(" "),
+                  _vm.computerChoices[round - 1]
+                    ? _c("player-card", {
+                        attrs: {
+                          select: false,
+                          player: _vm.computerChoices[round - 1],
+                          format: "horizontal"
+                        }
+                      })
+                    : _vm._e()
+                ],
+                2
+              )
+            : _vm._e()
+        }),
+        _vm._v(" "),
+        _c("div", { staticClass: "-label-choice" }, [_vm._v("Choice")])
+      ],
+      2
+    )
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "-score" }, [
-      _c("span", [_vm._v("You")]),
-      _c("span", [_vm._v("Computer")])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
@@ -1275,7 +1332,12 @@ var render = function() {
     "figure",
     { class: _vm.cardClass },
     [
-      _c("img", { attrs: { src: _vm.player.image, alt: "Zinedine Zidane" } }),
+      _c("img", {
+        attrs: {
+          src: _vm.player.image,
+          alt: _vm.player.firstName + " " + _vm.player.lastName
+        }
+      }),
       _vm._v(" "),
       _c("figcaption", [
         _c("h2", [
@@ -1311,13 +1373,17 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "screen-final" }, [
-    _c("div", [_vm._v(" " + _vm._s(_vm.resultText))]),
-    _vm._v(" "),
-    _c("button", { staticClass: "btn-replay", on: { click: _vm.playAgain } }, [
-      _vm._v("Play Again")
+    _c("div", { staticClass: "-result" }, [
+      _vm._v(" " + _vm._s(_vm.resultText))
     ]),
     _vm._v(" "),
-    _c("button", { staticClass: "btn-replay", on: { click: _vm.goHome } }, [
+    _c(
+      "button",
+      { staticClass: "btn btn-replay", on: { click: _vm.playAgain } },
+      [_vm._v("Play Again")]
+    ),
+    _vm._v(" "),
+    _c("button", { staticClass: "btn btn-replay", on: { click: _vm.goHome } }, [
       _vm._v("Back Home")
     ])
   ])

@@ -2,19 +2,33 @@
     <div class="screen-game">
         <p>Match in 3 sets</p>
         <div >
-            <div class="">Choice</div>
-            <div class="-score"><span>You</span><span>Computer</span></div>
-            <div class="-list-card">
+
+            <div class="-score">
+                <div class="-gamer"><span>You</span> {{ playerScore }} </div>
+                <div class="-gamer">{{ computerScore }} <span>Computer</span></div>
+            </div>
+            <div v-for="round in rounds"
+                 v-if="canShowRound(round)"
+                 :key="round"
+                 :class="['-list-card', roundClass(round)]"
+            >
+
                 <player-card
-                        v-for="(player, index) in players"
-                        @click.native="selectPlayer(player)"
-                        :key="index"
+                        v-for="player in players"
+                        @click.native="selectPlayer(player, round)"
+                        :key="player.id"
                         :select="true"
                         :player="player" format="horizontal"
                 />
 
-                <div> <!-- choix de l'ordinateur --> </div>
+                <player-card
+                        v-if="computerChoices[round - 1]"
+                        :select="false"
+                        :player="computerChoices[round - 1]" format="horizontal"
+                />
+
             </div>
+            <div class="-label-choice">Choice</div>
         </div>
     </div>
 </template>
@@ -38,42 +52,62 @@
                 currentRound: 1,
                 playerScore: 0,
                 computerScore: 0,
-                playerChoice: {},
-                computerChoice: {},
+                playerChoices: [],
+                computerChoices: [],
             }
         },
 
         methods: {
-            selectPlayer(player) {
-                this.playerChoice = player;
-                this.computerChoice = randomArrayElement(this.players);
+            selectPlayer(player, round) {
+                if (!this.canInteract(round)) {
+                    return false;
+                }
 
-                this.computeRound();
+                this.playerChoices.push(player);
+                this.computerChoices.push(randomArrayElement(this.players));
+
+                this.computeRound(round - 1);
             },
 
-            computeRound() {
-                switch (this.computerChoice.type) {
-                    case this.playerChoice.type:
+            computeRound(round) {
+                switch (this.computerChoices[round].type) {
+                    case this.playerChoices[round].type:
                         this.playerScore += 1;
                         this.computerScore += 1;
                         break;
 
                     case "rock":
-                        this.playerChoice.type === "paper" ? this.playerScore += 1 : this.computerScore += 1;
+                        this.playerChoices[round].type === "paper" ? this.playerScore += 1 : this.computerScore += 1;
                         break;
                     case "scissors":
-                        this.playerChoice.type === "paper" ? this.computerScore += 1 : this.playerScore += 1;
+                        this.playerChoices[round].type === "paper" ? this.computerScore += 1 : this.playerScore += 1;
                         break;
                     case "paper":
-                        this.playerChoice.type === "rock" ? this.computerScore += 1 : this.playerScore += 1;
+                        this.playerChoices[round].type === "rock" ? this.computerScore += 1 : this.playerScore += 1;
                         break;
                 }
 
                 if (this.currentRound + 1 > this.rounds) {
-                    return this.$emit('game-end', this.playerScore - this.computerScore);
+                    setTimeout(() => {
+                        return this.$emit('game-end', this.playerScore - this.computerScore);
+                    }, 2000)
                 }
 
                 this.currentRound += 1;
+            },
+
+            canShowRound(round) {
+                return this.currentRound >= round;
+            },
+
+            canInteract(round) {
+                return this.currentRound === round;
+            },
+
+            roundClass(round) {
+                if (this.currentRound > round) {
+                    return '-played'
+                }
             }
         }
 

@@ -5,6 +5,13 @@
     .-list-card {
         display: flex;
     }
+    .-label-choice {
+        font-size: 6rem;
+        &:after {
+            content: '.';
+            animation: loading 1s ease alternate infinite;
+        }
+    }
     .-score {
         display: flex;
         justify-content: space-between;
