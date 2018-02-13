@@ -54,19 +54,19 @@
                     },
                     {
                         id: 2,
-                        firstName: 'Marco',
-                        lastName: 'Materazzi',
-                        image: "assets/styles/images/marco-materazzi.jpg",
-                        label: "This is scissors",
-                        type: 'scissors'
-                    },
-                    {
-                        id: 3,
                         firstName: 'Horacio',
                         lastName: 'Elizondo',
                         image: "assets/styles/images/horacio-elizondo.jpg",
                         label: "This is paper",
                         type: 'paper',
+                    },
+                    {
+                        id: 3,
+                        firstName: 'Marco',
+                        lastName: 'Materazzi',
+                        image: "assets/styles/images/marco-materazzi.jpg",
+                        label: "This is scissors",
+                        type: 'scissors'
                     },
                 ]
             }

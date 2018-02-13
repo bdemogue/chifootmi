@@ -1,13 +1,2 @@
-# Chifootmi:
-## Installation
+# Chifootmi:##
 
-``` npm i -g yarn && yarn  ```
-
-## Development
-
-watch : 
-``` yarn fwatch  ```
-
-compile:
-
-``` yarn front ```

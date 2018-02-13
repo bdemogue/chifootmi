@@ -53,10 +53,19 @@ html {
 /* "-like" classes should be used to maintain the semantically appropriate heading levels - NOT for use on non-headings */
 h1,
 .h1-like {
-  font-size: 8rem;
+  font-size: 4rem;
   font-weight: 400;
-  margin: 8rem 0 6rem;
+  margin: 2rem 0 4rem;
   text-align: center;
+}
+
+@media all and (min-width: 48em) {
+  h1,
+  .h1-like {
+    font-size: 8rem;
+    font-weight: 400;
+    margin: 8rem 0 6rem;
+  }
 }
 
 p, li {
@@ -286,6 +295,18 @@ body {
   scroll-behavior: smooth;
 }
 
+.app {
+  overflow: hidden;
+}
+
+.dflex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
 .screen-start {
   margin: 0 auto;
   max-width: 135rem;
@@ -296,20 +317,43 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media all and (min-width: 48em) {
+  .screen-start .legend {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 
 .screen-start figure {
   background: #333;
   border-radius: 0.5rem;
   color: #FFF;
-  overflow: hidden;
-  width: 30rem;
-  text-align: center;
-  height: 40rem;
-  position: relative;
+  height: 22rem;
   margin: 10px 1%;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  width: 25rem;
+}
+
+@media all and (min-width: 48em) {
+  .screen-start figure {
+    height: 40rem;
+    width: 30rem;
+  }
 }
 
 .screen-start figure:hover img {
@@ -359,16 +403,25 @@ body {
 
 .screen-start figcaption:before, .screen-start figcaption:after {
   position: absolute;
-  top: 30px;
-  right: 30px;
-  bottom: 30px;
-  left: 30px;
+  top: 2rem;
+  right: 2rem;
+  bottom: 2rem;
+  left: 2rem;
   content: '';
   opacity: 0;
   -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
   transition: opacity 0.35s, -webkit-transform 0.35s;
   transition: opacity 0.35s, transform 0.35s;
   transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
+}
+
+@media all and (min-width: 48em) {
+  .screen-start figcaption:before, .screen-start figcaption:after {
+    top: 3rem;
+    right: 3rem;
+    bottom: 3rem;
+    left: 3rem;
+  }
 }
 
 .screen-start figcaption:before {
@@ -386,10 +439,9 @@ body {
 }
 
 .screen-start h2 {
-  margin: 0;
-  padding-top: 85%;
-  word-spacing: -0.15em;
   font-weight: 300;
+  margin: 0;
+  padding-top: 10rem;
   text-transform: uppercase;
   -webkit-transition: -webkit-transform 0.35s;
   transition: -webkit-transform 0.35s;
@@ -397,6 +449,13 @@ body {
   transition: transform 0.35s, -webkit-transform 0.35s;
   -webkit-transform: translate3d(0, -20px, 0);
           transform: translate3d(0, -20px, 0);
+  word-spacing: -0.15em;
+}
+
+@media all and (min-width: 48em) {
+  .screen-start h2 {
+    padding-top: 85%;
+  }
 }
 
 .screen-start h2 span {
@@ -417,12 +476,19 @@ body {
 
 .screen-game {
   margin: 0 auto;
-  max-width: 135rem;
+  max-width: 120rem;
   width: 98%;
 }
 
 .screen-game .-label-choice {
-  font-size: 4.5rem;
+  font-size: 3.8rem;
+  text-align: center;
+}
+
+@media all and (min-width: 48em) {
+  .screen-game .-label-choice {
+    font-size: 4.2rem;
+  }
 }
 
 .screen-game .-label-choice:after {
@@ -435,36 +501,80 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .screen-game .-list-card.-played {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  position: relative;
+}
+
+.screen-game .-list-card.-played:before {
+  color: #3f51b5;
+  content: "VS";
+  font-size: 4rem;
+  font-weight: 700;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .screen-game .-list-card.-played figure {
-  height: 15rem;
+  height: 0;
+  overflow: hidden;
+  margin: 0;
+  width: 0;
+}
+
+.screen-game .-list-card.-played figure.-selected {
+  display: block;
+  height: 10rem;
+  margin: 10px 1%;
+  overflow: visible;
   width: 30rem;
 }
 
+.screen-game .-list-card.-played .icon {
+  opacity: 1;
+}
+
+.screen-game .-list-card.-played figcaption {
+  padding: 1rem 2rem;
+}
+
+.screen-game .-list-card.-played figure.-computer {
+  margin-left: auto;
+}
+
 .screen-game .-list-card.-played img {
-  opacity: 0.4;
+  opacity: 0;
 }
 
 .screen-game .-list-card.-played h2 {
-  padding-top: 25%;
+  padding-top: 2rem;
 }
 
 .screen-game .-score {
-  color: #3f51b5;
+  color: #7986cb;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-size: 5rem;
+  font-size: 4.2rem;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media all and (min-width: 48em) {
+  .screen-game .-score {
+    font-size: 5.6rem;
+  }
 }
 
 .screen-game figure {
@@ -494,6 +604,16 @@ body {
   -o-object-position: center top;
      object-position: center top;
   width: 100%;
+}
+
+.screen-game .icon {
+  fill: #FFF;
+  height: 4rem;
+  margin: 0 auto;
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  width: 4rem;
 }
 
 .screen-game figcaption {

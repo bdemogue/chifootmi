@@ -1,8 +1,10 @@
 <template>
     <div class="screen-final">
         <div class="-result"> {{ resultText }}</div>
-        <button @click="playAgain" class="btn btn-replay">Play Again</button>
-        <button @click="goHome" class="btn btn-replay">Back Home</button>
+        <div class="dflex">
+            <button @click="playAgain" class="btn btn-replay">Play Again</button>
+            <button @click="goHome" class="btn btn-replay">Back Home</button>
+        </div>
     </div>
 </template>
 <script>
@@ -16,10 +18,10 @@
                 }
 
                 if (this.scoreDifference > 0) {
-                    return "You win";
+                    return "You win!";
                 }
 
-                return 'You lose';
+                return 'You lose!';
             }
         },
 

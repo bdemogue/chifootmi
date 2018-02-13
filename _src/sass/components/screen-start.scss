@@ -4,18 +4,27 @@
     width: 98%;
     .legend {
         display: flex;
-        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+        @include teq-breakpoint($medium) {
+            justify-content: space-around;
+            flex-direction: row;
+        }
     }
     figure {
         background: #333;
         border-radius: 0.5rem;
         color: #FFF;
-        overflow: hidden;
-        width: 30rem;
-        text-align: center;
-        height: 40rem;
-        position: relative;
+        height: 22rem;
         margin: 10px 1%;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+        width: 25rem;
+        @include teq-breakpoint($medium) {
+            height: 40rem;
+            width: 30rem;
+        }
         &:hover {
             img {
                 opacity: 0.4;
@@ -56,13 +65,19 @@
         &:before,
         &:after {
             position: absolute;
-            top: 30px;
-            right: 30px;
-            bottom: 30px;
-            left: 30px;
+            top: 2rem;
+            right: 2rem;
+            bottom: 2rem;
+            left: 2rem;
             content: '';
             opacity: 0;
             transition: opacity 0.35s, transform 0.35s;
+            @include teq-breakpoint($medium) {
+                top: 3rem;
+                right: 3rem;
+                bottom: 3rem;
+                left: 3rem;
+            }
         }
         &:before {
             border-top: 1px solid #fff;
@@ -76,13 +91,16 @@
         }
     }
     h2 {
-        margin: 0;
-        padding-top: 85%;
-        word-spacing: -0.15em;
         font-weight: 300;
+        margin: 0;
+        padding-top: 10rem;
         text-transform: uppercase;
         transition: transform 0.35s;
         transform: translate3d(0,-20px,0);
+        word-spacing: -0.15em;
+        @include teq-breakpoint($medium) {
+            padding-top: 85%;
+        }
         span {
             font-weight: 800;
         }

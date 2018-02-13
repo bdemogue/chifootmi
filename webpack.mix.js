@@ -3,7 +3,7 @@ const LiveReloadPlugin = require('webpack-livereload-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const packageFile = require('./package.json');
 const isFront = process.env.FRONT;
-const publicPath = isFront ? './assets/' : '../../app/public/dist/frontend/';
+const publicPath = './assets/';
 
 const destination = {
     fonts: `${publicPath}styles/fonts`,
@@ -37,7 +37,3 @@ mix.webpackConfig({
     .version()
     .sourceMaps()
 
-if (!isFront) {
-    mix.copyDirectory('assets/styles/images', destination.images)
-        .copyDirectory('assets/styles/fonts', destination.fonts)
-}

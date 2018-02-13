@@ -1,9 +1,13 @@
 .screen-game {
     margin: 0 auto;
-    max-width: 135rem;
+    max-width: 120rem;
     width: 98%;
     .-label-choice {
-        font-size: 4.5rem;
+        font-size: 3.8rem;
+        text-align: center;
+        @include teq-breakpoint($medium) {
+            font-size: 4.2rem;
+        }
         &:after {
             content: '.';
             animation: loading 1s ease alternate infinite;
@@ -11,26 +15,60 @@
     }
     .-list-card {
         display: flex;
+        justify-content: center;
         &.-played {
-            justify-content: space-between;
+            justify-content: flex-start;
+            position: relative;
+            &:before {
+                color: #3f51b5;
+                content: "VS";
+                font-size: 4rem;
+                font-weight: 700;
+                left: 50%;
+                position: absolute;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
             figure {
-                height: 15rem;
+                height: 0;
+                overflow: hidden;
+                margin: 0;
+                width: 0;
+            }
+            figure.-selected {
+                display: block;
+                height: 10rem;
+                margin: 10px 1%;
+                overflow: visible;
                 width: 30rem;
             }
+            .icon {
+                opacity: 1;
+            }
+            figcaption {
+                padding: 1rem 2rem;
+            }
+            figure.-computer {
+                margin-left:  auto;
+            }
             img {
-                opacity: 0.4;
+                opacity: 0;
             }
             h2 {
-                padding-top: 25%;
+                padding-top: 2rem;
             }
         }
     }
     .-score {
-        color: #3f51b5;
+        color: #7986cb;
         display: flex;
-        font-size: 5rem;
+        font-size: 4.2rem;
         justify-content: space-between;
+        @include teq-breakpoint($medium) {
+            font-size: 5.6rem;
+        }
     }
+
     figure {
         background: #333;
         border-radius: 0.5rem;
@@ -55,6 +93,14 @@
             object-position: center top;
             width: 100%;
         }
+    }
+    .icon {
+        fill: #FFF;
+        height: 4rem;
+        margin: 0 auto;
+        opacity: 0;
+        transition: 0.5s;
+        width: 4rem;
     }
     figcaption {
         box-sizing: border-box;
@@ -97,6 +143,7 @@
         text-transform: uppercase;
         transition: transform 0.35s;
         transform: translate3d(0,-20px,0);
+
         span {
             font-weight: 800;
         }

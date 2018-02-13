@@ -103,7 +103,7 @@ var normalizeComponent = __webpack_require__("./node_modules/vue-loader/lib/comp
 /* script */
 var __vue_script__ = __webpack_require__("./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]],\"plugins\":[\"transform-object-rest-spread\",[\"transform-runtime\",{\"polyfill\":false,\"helpers\":false}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./_src/scripts/components/PlayerCard.vue")
 /* template */
-var __vue_template__ = __webpack_require__("./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-5053e40c\",\"hasScoped\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./_src/scripts/components/PlayerCard.vue")
+var __vue_template__ = __webpack_require__("./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-0b096ab2\",\"hasScoped\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./_src/scripts/components/PlayerCard.vue")
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -120,7 +120,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "_src\\scripts\\components\\PlayerCard.vue"
+Component.options.__file = "_src/scripts/components/PlayerCard.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -129,9 +129,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-5053e40c", Component.options)
+    hotAPI.createRecord("data-v-0b096ab2", Component.options)
   } else {
-    hotAPI.reload("data-v-5053e40c", Component.options)
+    hotAPI.reload("data-v-0b096ab2", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -151,7 +151,7 @@ var normalizeComponent = __webpack_require__("./node_modules/vue-loader/lib/comp
 /* script */
 var __vue_script__ = __webpack_require__("./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]],\"plugins\":[\"transform-object-rest-spread\",[\"transform-runtime\",{\"polyfill\":false,\"helpers\":false}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./_src/scripts/components/ScreenFinal.vue")
 /* template */
-var __vue_template__ = __webpack_require__("./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-5c725c5e\",\"hasScoped\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./_src/scripts/components/ScreenFinal.vue")
+var __vue_template__ = __webpack_require__("./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-03c92ac4\",\"hasScoped\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./_src/scripts/components/ScreenFinal.vue")
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -168,7 +168,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "_src\\scripts\\components\\ScreenFinal.vue"
+Component.options.__file = "_src/scripts/components/ScreenFinal.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -177,9 +177,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-5c725c5e", Component.options)
+    hotAPI.createRecord("data-v-03c92ac4", Component.options)
   } else {
-    hotAPI.reload("data-v-5c725c5e", Component.options)
+    hotAPI.reload("data-v-03c92ac4", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -199,7 +199,7 @@ var normalizeComponent = __webpack_require__("./node_modules/vue-loader/lib/comp
 /* script */
 var __vue_script__ = __webpack_require__("./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]],\"plugins\":[\"transform-object-rest-spread\",[\"transform-runtime\",{\"polyfill\":false,\"helpers\":false}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./_src/scripts/components/ScreenGame.vue")
 /* template */
-var __vue_template__ = __webpack_require__("./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-41bb0867\",\"hasScoped\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./_src/scripts/components/ScreenGame.vue")
+var __vue_template__ = __webpack_require__("./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-64604514\",\"hasScoped\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./_src/scripts/components/ScreenGame.vue")
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -216,7 +216,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "_src\\scripts\\components\\ScreenGame.vue"
+Component.options.__file = "_src/scripts/components/ScreenGame.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -225,9 +225,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-41bb0867", Component.options)
+    hotAPI.createRecord("data-v-64604514", Component.options)
   } else {
-    hotAPI.reload("data-v-41bb0867", Component.options)
+    hotAPI.reload("data-v-64604514", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -247,7 +247,7 @@ var normalizeComponent = __webpack_require__("./node_modules/vue-loader/lib/comp
 /* script */
 var __vue_script__ = __webpack_require__("./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]],\"plugins\":[\"transform-object-rest-spread\",[\"transform-runtime\",{\"polyfill\":false,\"helpers\":false}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./_src/scripts/components/ScreenStart.vue")
 /* template */
-var __vue_template__ = __webpack_require__("./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-3daf7ebd\",\"hasScoped\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./_src/scripts/components/ScreenStart.vue")
+var __vue_template__ = __webpack_require__("./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-6fb1d7b0\",\"hasScoped\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./_src/scripts/components/ScreenStart.vue")
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -264,7 +264,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "_src\\scripts\\components\\ScreenStart.vue"
+Component.options.__file = "_src/scripts/components/ScreenStart.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -273,9 +273,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-3daf7ebd", Component.options)
+    hotAPI.createRecord("data-v-6fb1d7b0", Component.options)
   } else {
-    hotAPI.reload("data-v-3daf7ebd", Component.options)
+    hotAPI.reload("data-v-6fb1d7b0", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -292,6 +292,7 @@ module.exports = Component.exports
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
 //
 //
 //
@@ -346,6 +347,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     props: ['scoreDifference'],
@@ -357,10 +360,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             }
 
             if (this.scoreDifference > 0) {
-                return "You win";
+                return "You win!";
             }
 
-            return 'You lose';
+            return 'You lose!';
         }
     },
 
@@ -383,6 +386,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__PlayerCard_vue__ = __webpack_require__("./_src/scripts/components/PlayerCard.vue");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__PlayerCard_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__PlayerCard_vue__);
+//
+//
+//
+//
+//
 //
 //
 //
@@ -476,6 +484,7 @@ var randomArrayElement = function randomArrayElement(myArray) {
             }
 
             if (this.currentRound + 1 > this.rounds) {
+
                 setTimeout(function () {
                     return _this.$emit('game-end', _this.playerScore - _this.computerScore);
                 }, 2000);
@@ -502,6 +511,17 @@ var randomArrayElement = function randomArrayElement(myArray) {
             if (player.id === this.playerChoices[round - 1].id) {
                 return '-selected';
             }
+        },
+        onScreenPlayers: function onScreenPlayers() {
+            var _this2 = this;
+
+            if (!this.playerChoices[this.currentRound]) {
+                return this.players;
+            }
+
+            return this.players.filter(function (player) {
+                return player.id === _this2.playerChoices[_this2.currentRound];
+            });
         }
     }
 
@@ -574,18 +594,18 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 type: 'rock'
             }, {
                 id: 2,
-                firstName: 'Marco',
-                lastName: 'Materazzi',
-                image: "assets/styles/images/marco-materazzi.jpg",
-                label: "This is scissors",
-                type: 'scissors'
-            }, {
-                id: 3,
                 firstName: 'Horacio',
                 lastName: 'Elizondo',
                 image: "assets/styles/images/horacio-elizondo.jpg",
                 label: "This is paper",
                 type: 'paper'
+            }, {
+                id: 3,
+                firstName: 'Marco',
+                lastName: 'Materazzi',
+                image: "assets/styles/images/marco-materazzi.jpg",
+                label: "This is scissors",
+                type: 'scissors'
             }]
         };
     },
@@ -1163,7 +1183,227 @@ module.exports = function normalizeComponent (
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-3daf7ebd\",\"hasScoped\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./_src/scripts/components/ScreenStart.vue":
+/***/ "./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-03c92ac4\",\"hasScoped\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./_src/scripts/components/ScreenFinal.vue":
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "screen-final" }, [
+    _c("div", { staticClass: "-result" }, [
+      _vm._v(" " + _vm._s(_vm.resultText))
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "dflex" }, [
+      _c(
+        "button",
+        { staticClass: "btn btn-replay", on: { click: _vm.playAgain } },
+        [_vm._v("Play Again")]
+      ),
+      _vm._v(" "),
+      _c(
+        "button",
+        { staticClass: "btn btn-replay", on: { click: _vm.goHome } },
+        [_vm._v("Back Home")]
+      )
+    ])
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-03c92ac4", module.exports)
+  }
+}
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-0b096ab2\",\"hasScoped\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./_src/scripts/components/PlayerCard.vue":
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("figure", { class: _vm.cardClass }, [
+    _c("img", {
+      attrs: {
+        src: _vm.player.image,
+        alt: _vm.player.firstName + " " + _vm.player.lastName
+      }
+    }),
+    _vm._v(" "),
+    _c(
+      "figcaption",
+      [
+        _vm._t("icon"),
+        _vm._v(" "),
+        _c("h2", [
+          _vm._v(_vm._s(_vm.player.firstName) + " "),
+          _c("span", [_vm._v(_vm._s(_vm.player.lastName))])
+        ]),
+        _vm._v(" "),
+        _c("p", [_vm._v(_vm._s(_vm.player.label))])
+      ],
+      2
+    )
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-0b096ab2", module.exports)
+  }
+}
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-64604514\",\"hasScoped\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./_src/scripts/components/ScreenGame.vue":
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "screen-game" }, [
+    _c("p", [_vm._v("Match in " + _vm._s(_vm.rounds) + " sets")]),
+    _vm._v(" "),
+    _c(
+      "div",
+      [
+        _c("div", { staticClass: "-score" }, [
+          _c("div", { staticClass: "-gamer" }, [
+            _c("span", [_vm._v("You")]),
+            _vm._v(" " + _vm._s(_vm.playerScore) + " ")
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "-gamer" }, [
+            _vm._v(_vm._s(_vm.computerScore) + " "),
+            _c("span", [_vm._v("Computer")])
+          ])
+        ]),
+        _vm._v(" "),
+        _vm._l(_vm.rounds, function(round) {
+          return _vm.canShowRound(round)
+            ? _c(
+                "div",
+                { key: round, class: ["-list-card", _vm.roundClass(round)] },
+                [
+                  _vm._l(_vm.players, function(player) {
+                    return _c(
+                      "player-card",
+                      {
+                        key: player.id,
+                        class: _vm.isSelected(player, round),
+                        attrs: {
+                          select: true,
+                          player: player,
+                          format: "horizontal"
+                        },
+                        nativeOn: {
+                          click: function($event) {
+                            _vm.selectPlayer(player, round)
+                          }
+                        }
+                      },
+                      [
+                        _c(
+                          "svg",
+                          {
+                            class: "icon icon-" + player.type,
+                            attrs: { slot: "icon" },
+                            slot: "icon"
+                          },
+                          [
+                            _c("use", {
+                              attrs: { "xlink:href": "#icon-" + player.type }
+                            })
+                          ]
+                        )
+                      ]
+                    )
+                  }),
+                  _vm._v(" "),
+                  _vm.computerChoices[round - 1]
+                    ? _c(
+                        "player-card",
+                        {
+                          staticClass: "-selected -computer",
+                          attrs: {
+                            select: false,
+                            player: _vm.computerChoices[round - 1],
+                            format: "horizontal"
+                          }
+                        },
+                        [
+                          _c(
+                            "svg",
+                            {
+                              class:
+                                "icon icon-" +
+                                _vm.computerChoices[round - 1].type,
+                              attrs: { slot: "icon" },
+                              slot: "icon"
+                            },
+                            [
+                              _c("use", {
+                                attrs: {
+                                  "xlink:href":
+                                    "#icon-" +
+                                    _vm.computerChoices[round - 1].type
+                                }
+                              })
+                            ]
+                          )
+                        ]
+                      )
+                    : _vm._e()
+                ],
+                2
+              )
+            : _vm._e()
+        }),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            directives: [
+              {
+                name: "show",
+                rawName: "v-show",
+                value: _vm.currentRound <= _vm.rounds,
+                expression: "currentRound <= rounds"
+              }
+            ],
+            staticClass: "-label-choice"
+          },
+          [_vm._v("Choose your weapon")]
+        )
+      ],
+      2
+    )
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-64604514", module.exports)
+  }
+}
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-6fb1d7b0\",\"hasScoped\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./_src/scripts/components/ScreenStart.vue":
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -1245,167 +1485,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-3daf7ebd", module.exports)
-  }
-}
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-41bb0867\",\"hasScoped\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./_src/scripts/components/ScreenGame.vue":
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "screen-game" }, [
-    _c("p", [_vm._v("Match in 3 sets")]),
-    _vm._v(" "),
-    _c(
-      "div",
-      [
-        _c("div", { staticClass: "-score" }, [
-          _c("div", { staticClass: "-gamer" }, [
-            _c("span", [_vm._v("You")]),
-            _vm._v(" " + _vm._s(_vm.playerScore) + " ")
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "-gamer" }, [
-            _vm._v(_vm._s(_vm.computerScore) + " "),
-            _c("span", [_vm._v("Computer")])
-          ])
-        ]),
-        _vm._v(" "),
-        _vm._l(_vm.rounds, function(round) {
-          return _vm.canShowRound(round)
-            ? _c(
-                "div",
-                { key: round, class: ["-list-card", _vm.roundClass(round)] },
-                [
-                  _vm._l(_vm.players, function(player) {
-                    return _c("player-card", {
-                      key: player.id,
-                      class: _vm.isSelected(player, round),
-                      attrs: {
-                        select: true,
-                        player: player,
-                        format: "horizontal"
-                      },
-                      nativeOn: {
-                        click: function($event) {
-                          _vm.selectPlayer(player, round)
-                        }
-                      }
-                    })
-                  }),
-                  _vm._v(" "),
-                  _vm.computerChoices[round - 1]
-                    ? _c("player-card", {
-                        attrs: {
-                          select: false,
-                          player: _vm.computerChoices[round - 1],
-                          format: "horizontal"
-                        }
-                      })
-                    : _vm._e()
-                ],
-                2
-              )
-            : _vm._e()
-        }),
-        _vm._v(" "),
-        _c("div", { staticClass: "-label-choice" }, [_vm._v("Choice")])
-      ],
-      2
-    )
-  ])
-}
-var staticRenderFns = []
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-41bb0867", module.exports)
-  }
-}
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-5053e40c\",\"hasScoped\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./_src/scripts/components/PlayerCard.vue":
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "figure",
-    { class: _vm.cardClass },
-    [
-      _c("img", {
-        attrs: {
-          src: _vm.player.image,
-          alt: _vm.player.firstName + " " + _vm.player.lastName
-        }
-      }),
-      _vm._v(" "),
-      _c("figcaption", [
-        _c("h2", [
-          _vm._v(_vm._s(_vm.player.firstName) + " "),
-          _c("span", [_vm._v(_vm._s(_vm.player.lastName))])
-        ]),
-        _vm._v(" "),
-        _c("p", [_vm._v(_vm._s(_vm.player.label))])
-      ]),
-      _vm._v(" "),
-      _vm._t("icon")
-    ],
-    2
-  )
-}
-var staticRenderFns = []
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-5053e40c", module.exports)
-  }
-}
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-5c725c5e\",\"hasScoped\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./_src/scripts/components/ScreenFinal.vue":
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "screen-final" }, [
-    _c("div", { staticClass: "-result" }, [
-      _vm._v(" " + _vm._s(_vm.resultText))
-    ]),
-    _vm._v(" "),
-    _c(
-      "button",
-      { staticClass: "btn btn-replay", on: { click: _vm.playAgain } },
-      [_vm._v("Play Again")]
-    ),
-    _vm._v(" "),
-    _c("button", { staticClass: "btn btn-replay", on: { click: _vm.goHome } }, [
-      _vm._v("Back Home")
-    ])
-  ])
-}
-var staticRenderFns = []
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-5c725c5e", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-6fb1d7b0", module.exports)
   }
 }
 

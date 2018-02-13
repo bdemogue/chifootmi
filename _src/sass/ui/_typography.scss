@@ -42,10 +42,15 @@ html {
 /* "-like" classes should be used to maintain the semantically appropriate heading levels - NOT for use on non-headings */
 h1,
 .h1-like {
-    font-size: 8rem;
+    font-size: 4rem;
     font-weight: 400;
-    margin: 8rem 0 6rem;
+    margin: 2rem 0 4rem;
     text-align: center;
+    @include teq-breakpoint($medium) {
+        font-size: 8rem;
+        font-weight: 400;
+        margin: 8rem 0 6rem;
+    }
 
 }
 h2,

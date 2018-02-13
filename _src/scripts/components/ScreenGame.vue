@@ -1,6 +1,6 @@
 <template>
     <div class="screen-game">
-        <p>Match in 3 sets</p>
+        <p>Match in {{ rounds }} sets</p>
         <div >
 
             <div class="-score">
@@ -20,16 +20,21 @@
                         :key="player.id"
                         :select="true"
                         :player="player" format="horizontal"
-                />
+                >
+                    <svg slot="icon" :class="`icon icon-${player.type}`"><use :xlink:href="`#icon-${player.type}`"></use></svg>
+                </player-card>
 
                 <player-card
                         v-if="computerChoices[round - 1]"
+                        class="-selected -computer"
                         :select="false"
                         :player="computerChoices[round - 1]" format="horizontal"
-                />
+                >
+                    <svg slot="icon" :class="`icon icon-${computerChoices[round - 1].type}`"><use :xlink:href="`#icon-${computerChoices[round - 1].type}`"></use></svg>
+                </player-card>
 
             </div>
-            <div class="-label-choice">Choice</div>
+            <div v-show="currentRound <= rounds" class="-label-choice">Choose your weapon</div>
         </div>
     </div>
 </template>
@@ -89,6 +94,7 @@
                 }
 
                 if (this.currentRound + 1 > this.rounds) {
+
                     setTimeout(() => {
                         return this.$emit('game-end', this.playerScore - this.computerScore);
                     }, 2000)
@@ -119,6 +125,14 @@
                 if (player.id === this.playerChoices[round - 1].id) {
                     return '-selected';
                 }
+            },
+
+            onScreenPlayers() {
+                if (!this.playerChoices[this.currentRound]) {
+                    return this.players;
+                }
+
+                return this.players.filter(player => player.id === this.playerChoices[this.currentRound])
             }
         }
 
